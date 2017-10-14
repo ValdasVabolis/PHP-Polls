@@ -24,6 +24,12 @@
       $json = json_encode($data);
       file_put_contents("votes.json", $json);
 
+      echo "Results: <br>";
+
+      foreach($data as $key => $val) {
+        echo $key . ": ";
+        echo $val . "<br>";
+      }
     ?>
   </body>
 </html>
