@@ -19,11 +19,9 @@
      if(isset($_POST) && isset($_POST["option"])) {
         $option = $_POST["option"];
       }
-    
-      $data = json_decode(file_get_contents("votes.json"));
-      $data[$option]++;
+      $data = json_decode(file_get_contents("votes.json", true));
+      $data->$option++;
       $json = json_encode($data);
-
       file_put_contents("votes.json", $json);
 
     ?>
