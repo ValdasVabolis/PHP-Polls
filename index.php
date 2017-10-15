@@ -25,11 +25,13 @@
       file_put_contents("votes.json", $json);
 
       echo "Results: <br>";
+      echo "<ul>";
 
       foreach($data as $key => $val) {
-        echo $key . ": ";
-        echo $val . "<br>";
+        echo "<li>" . $key . ": ";
+        echo $val . "</li>";
       }
+      echo "</ul>";
     ?>
   </body>
 </html>
