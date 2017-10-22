@@ -1,0 +1,67 @@
+{
+  "active_poll_id": "1",
+  "polls": [
+    {
+      "id": "1",
+      "title": "How would you rate the quality of our educational services?",
+      "options": [
+        {
+          "id": "1",
+          "label": "High",
+          "score": 0
+        },
+        {
+          "id": "2",
+          "label": "Medium",
+          "score": 0
+        },
+        {
+          "id": "3",
+          "label": "Low",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Which day is most convenient for PTA meetings?",
+      "options": [
+        {
+          "id": "4",
+          "label": "Sunday",
+          "score": 0
+        },
+        {
+          "id": "5",
+          "label": "Monday",
+          "score": 0
+        },
+        {
+          "id": "6",
+          "label": "Tuesday",
+          "score": 0
+        },
+        {
+          "id": "7",
+          "label": "Wednesday",
+          "score": 0
+        },
+        {
+          "id": "8",
+          "label": "Tuesday",
+          "score": 0
+        },
+        {
+          "id": "9",
+          "label": "Friday",
+          "score": 0
+        },
+        {
+          "id": "10",
+          "label": "Saturday",
+          "score": 0
+        }
+      ]
+    }
+  ]
+}

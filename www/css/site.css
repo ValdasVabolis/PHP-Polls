@@ -1,0 +1,70 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background-attachment: fixed;
+  background-image: url(http://vieksniug.lt/sandelys/uploads/2017/09/ruduo.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  background-image: url('../img/demo_frame_index.jpg');
+  background-repeat: no-repeat;
+  background-size: 100.1%;
+  height: 2160px;
+  margin: 30px auto;
+  overflow: hidden;
+  position: relative;
+  width: 1170px;
+}
+
+.sidebar {
+  position: absolute;
+  right: 13px;
+  width: 260px;
+}
+
+.sidebar-poll {
+  color: #666;
+  height: 500px;
+  position: absolute;
+  top: 990px;
+  width: 260px;
+}
+
+.sidebar-poll-title {
+  font-size: 15px;
+  line-height: 1.3;
+  margin-bottom: 5px;
+}
+
+.sidebar-poll-options {
+  margin: 15px auto;
+  padding: 0 5px;
+}
+
+.sidebar-poll-options input {
+  margin: 5px 5px;
+}
+
+.sidebar-poll-form input[type=submit] {
+  background: #294a70;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 7px 10px;
+}
+
+.sidebar-poll-form input[type=submit]:hover {
+  background: #3c5a82;
+}
+
+.sidebar-poll-form input[type=radio],
+.sidebar-poll-form label:hover {
+  cursor: pointer;
+}
