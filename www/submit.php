@@ -1,4 +1,7 @@
 <?php
+  require_once dirname(__DIR__).'/poll/config/includes.php';
+?>
+<?php
   // VALDAS
   //
   // - index.php includes the form.php file, which is the poll.
@@ -18,6 +21,9 @@
   // - admin.php is going to be broken - not refactored yet - but the important part is
   //   going to be getting poll submissions working, saving, etc. with the new approach.
   //.  my advise is to ignore the admin.php refactor until votes are working fully.
+  //
+  // 1) get Poll id from $_POST paramaters
+  // 2) get Poll instance by id from Polls
   //
   // $option = "";
   // if(isset($_POST) && isset($_POST["option"])) {
@@ -40,8 +46,26 @@
   // }
   // echo "</ul>";
 
+  $option = "";
+  if(isset($_POST) && isset($_POST["option"])) {
+    $option = $_POST["option"];
+  }
+  $contents = file_get_contents(DB_PATH, true);
+  $data = json_decode($contents);
+  echo '<pre>';
+  print_r($data->polls[0]->options[0]);
+  echo '</pre>';
+
+  $poll = new Polls(DB_PATH);
+  $poll = $poll->getPoll($hidden_poll_id);
+  $option = $poll->getOption($option_id_chosen);
+  $option->incrementScore();
+  if($option->isValid()) {
+    $poll->save();
+  }
+
 
 
   // redirects back to home page
-  header("Location: index.php");
+  //header("Location: index.php");
 ?>

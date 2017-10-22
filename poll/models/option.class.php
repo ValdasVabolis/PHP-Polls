@@ -17,5 +17,13 @@
     public function getScore() {
       return $this->data->score;
     }
+
+    public function incrementScore() {
+      return $this->data->score++;
+    }
+
+    public function isValid() {
+      return $this->data != null;
+    }
   }
 ?>
